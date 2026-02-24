@@ -239,39 +239,57 @@
   overflow: hidden;
   border-radius: var(--radius-2xl);
   position: relative;
+  width: 100%;
+  height: 100%;
 }
 
 .about-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform var(--duration-slower) var(--ease-out);
+  transition: none; /* Remove transition for smooth GSAP parallax */
   will-change: transform;
-  transform: translateZ(0); /* Hardware acceleration */
-}
-
-/* Hover effect - only applies when not scrolling */
-.about-image-wrapper:hover .about-image {
-  transform: scale(1.05) translateZ(0);
+  display: block;
 }
 
 .about-image-1 {
   aspect-ratio: 3/4;
+  min-height: 400px;
 }
 
 .about-image-2 {
   aspect-ratio: 3/4;
   margin-top: var(--space-8);
+  min-height: 400px;
 }
 
 @media (min-width: 768px) {
   .about-image-1 {
     aspect-ratio: 4/5;
+    min-height: 500px;
   }
   
   .about-image-2 {
     aspect-ratio: 4/5;
+    min-height: 500px;
   }
+}
+
+/* Hover effect - applies scale on top of parallax transform */
+.about-image-wrapper::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: inherit;
+  border-radius: inherit;
+  opacity: 0;
+  transition: opacity var(--duration-slower) var(--ease-out);
+  pointer-events: none;
+}
+
+.about-image-wrapper:hover::after {
+  opacity: 0.1;
+  background: radial-gradient(ellipse at center, rgba(212, 165, 116, 0.2), transparent 70%);
 }
 
 /* About Content */
