@@ -56,21 +56,10 @@
       }
     });
 
-    // Throttle helper for performance
-    function throttle(func, limit) {
-      let inThrottle;
-      return function(...args) {
-        if (!inThrottle) {
-          func.apply(this, args);
-          inThrottle = true;
-          setTimeout(() => inThrottle = false, limit);
-        }
-      };
-    }
-
-    // Navbar scroll effect - throttled
+    // Navbar scroll effect
     let lastScroll = 0;
-    const handleScroll = throttle(() => {
+
+    window.addEventListener('scroll', () => {
       const currentScroll = window.pageYOffset;
 
       // Add/remove scrolled class
@@ -81,14 +70,12 @@
       }
 
       lastScroll = currentScroll;
-    }, 100);
+    }, { passive: true });
 
-    window.addEventListener('scroll', handleScroll, { passive: true });
-
-    // Active link highlighting based on scroll position - throttled
+    // Active link highlighting based on scroll position
     const sections = document.querySelectorAll('section[id]');
 
-    const highlightNavLink = throttle(() => {
+    function highlightNavLink() {
       const scrollY = window.pageYOffset;
 
       sections.forEach(section => {
@@ -106,7 +93,7 @@
           });
         }
       });
-    }, 150);
+    }
 
     window.addEventListener('scroll', highlightNavLink, { passive: true });
 

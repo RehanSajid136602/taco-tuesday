@@ -6,55 +6,22 @@
   <meta name="description" content="Taco Tuesday Coffee - Where premium coffee meets unexpected flavor. Experience our signature blends in a modern, welcoming atmosphere.">
   <meta name="theme-color" content="#1A1512">
   
-  <!-- Security Headers -->
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' fonts.googleapis.com; font-src fonts.gstatic.com; img-src 'self' data: blob: images.unsplash.com; connect-src 'self'">
-  <meta http-equiv="Cross-Origin-Opener-Policy" content="same-origin">
-  <meta http-equiv="Cross-Origin-Embedder-Policy" content="require-corp">
-  <meta http-equiv="X-Frame-Options" content="DENY">
-  <meta http-equiv="X-Content-Type-Options" content="nosniff">
-  <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
-  
-  <!-- Preconnect to Origins -->
+  <!-- Preconnect to Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
-  <link rel="preconnect" href="https://images.unsplash.com">
   
-  <!-- DNS Prefetch -->
-  <link rel="dns-prefetch" href="https://fonts.googleapis.com">
-  <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
-  <link rel="dns-prefetch" href="https://images.unsplash.com">
+  <!-- Google Fonts - General Sans -->
+  <link href="https://fonts.googleapis.com/css2?family=General+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   
-  <!-- Preload Critical Resources -->
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=General+Sans:wght@300;400;500;600;700&display=swap" as="style">
-  <link rel="preload" href="css/critical.css" as="style">
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/effects.css">
+  <link rel="stylesheet" href="css/layout.css">
   
-  <!-- Critical CSS - Inlined for FCP -->
-  <style>
-    :root{--color-bg-dark:#1A1512;--color-bg-darker:#0F0C0A;--color-bg-card:#251E1A;--color-bg-glass:rgba(26,21,18,.85);--color-bg-light:#F5EFE6;--color-primary:#D4A574;--color-primary-light:#E8C59A;--color-primary-dark:#B8925A;--color-secondary:#C65D3B;--color-glow:#E8B86D;--color-text-primary:#F5EFE6;--color-text-secondary:#B8A894;--color-text-tertiary:#8A7B6C;--font-primary:'General Sans',system-ui,-apple-system,sans-serif;--glass-blur:12px;--glass-border:rgba(255,255,255,.08);--shadow-lg:0 10px 15px rgba(0,0,0,.35),0 10px 30px rgba(0,0,0,.3);--radius-2xl:1.5rem;--radius-full:9999px;--space-2:.5rem;--space-3:.75rem;--space-4:1rem;--space-6:1.5rem;--space-8:2rem;--duration-normal:200ms;--ease-out:cubic-bezier(.215,.61,.355,1);--z-fixed:30}*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}html{font-size:16px;scroll-behavior:smooth;-webkit-font-smoothing:antialiased}body{font-family:var(--font-primary);font-size:1rem;line-height:1.5;color:var(--color-text-primary);background-color:var(--color-bg-dark);overflow-x:hidden}h1,h2,h3,h4,h5,h6{font-weight:700;line-height:1.25;letter-spacing:-.025em;color:var(--color-text-primary)}a{color:var(--color-primary);text-decoration:none;transition:color var(--duration-normal) var(--ease-out)}a:hover{color:var(--color-primary-light)}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border-width:0}.sr-only:focus{position:static;width:auto;height:auto;padding:1rem;margin:0;overflow:visible;clip:auto;white-space:normal;background:var(--color-primary);color:var(--color-bg-dark);z-index:9999;border-radius:.75rem}.noise-overlay{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:9999;opacity:.03;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E")}.navbar{position:fixed;top:var(--space-4);left:50%;transform:translateX(-50%);width:calc(100% - var(--space-8));max-width:1280px;z-index:var(--z-fixed);padding:var(--space-3) var(--space-6);border-radius:var(--radius-2xl);background:rgba(26,21,18,.7);backdrop-filter:blur(var(--glass-blur)) saturate(160%);-webkit-backdrop-filter:blur(var(--glass-blur)) saturate(160%);border:1px solid var(--glass-border);box-shadow:var(--shadow-lg);transition:all var(--duration-normal) var(--ease-out)}.navbar-container{display:flex;align-items:center;justify-content:space-between;gap:var(--space-4)}.navbar-logo{display:flex;align-items:center;gap:var(--space-2);font-size:1.25rem;font-weight:700;color:var(--color-text-primary);text-decoration:none;transition:color var(--duration-normal) var(--ease-out)}.navbar-logo:hover{color:var(--color-primary)}.navbar-logo-icon{width:32px;height:32px;color:var(--color-primary)}.navbar-nav{display:none;align-items:center;gap:var(--space-1)}@media(min-width:768px){.navbar-nav{display:flex}}.navbar-link{position:relative;padding:var(--space-2) var(--space-3);font-size:.875rem;font-weight:500;color:var(--color-text-secondary);text-decoration:none;transition:color var(--duration-normal) var(--ease-out);border-radius:.5rem}.navbar-link:hover{color:var(--color-text-primary);background:rgba(212,165,116,.1)}.navbar-link.active{color:var(--color-primary)}.navbar-cta{display:none}@media(min-width:768px){.navbar-cta{display:flex}}.navbar-toggle{display:flex;flex-direction:column;gap:5px;padding:var(--space-2);background:transparent;border:none;cursor:pointer;z-index:50}@media(min-width:768px){.navbar-toggle{display:none}}.navbar-toggle span{display:block;width:24px;height:2px;background:var(--color-text-primary);border-radius:var(--radius-full);transition:all var(--duration-normal) var(--ease-out)}.btn{display:inline-flex;align-items:center;justify-content:center;gap:var(--space-2);padding:var(--space-3) var(--space-6);font-size:.875rem;font-weight:500;letter-spacing:.025em;text-transform:uppercase;border-radius:var(--radius-full);cursor:pointer;transition:all var(--duration-normal) var(--ease-out);position:relative;overflow:hidden}.btn-primary{background:linear-gradient(135deg,var(--color-primary) 0%,var(--color-primary-dark) 100%);color:var(--color-bg-dark);box-shadow:0 4px 14px rgba(212,165,116,.4),0 0 30px rgba(212,165,116,.2)}.btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(212,165,116,.5),0 0 40px rgba(212,165,116,.3);color:var(--color-bg-dark)}.btn-outline{background:transparent;color:var(--color-primary);border:2px solid var(--color-primary)}.btn-outline:hover{background:var(--color-primary);color:var(--color-bg-dark);transform:translateY(-2px)}.btn-lg{padding:var(--space-4) var(--space-8);font-size:1rem}.hero{position:relative;min-height:100vh;display:flex;align-items:center;padding-top:calc(80px + 4rem);padding-bottom:4rem;overflow:hidden}.hero-container{display:grid;grid-template-columns:1fr;gap:3rem;align-items:center;max-width:1440px;margin:0 auto;padding-left:clamp(1.5rem,1rem + 2.5vw,4rem);padding-right:clamp(1.5rem,1rem + 2.5vw,4rem)}@media(min-width:1024px){.hero-container{grid-template-columns:1fr 1fr;gap:4rem}}.hero-content{position:relative;z-index:2;text-align:center}@media(min-width:1024px){.hero-content{text-align:left}}.hero-title{font-size:clamp(2.5rem,1.5rem + 5vw,5rem);font-weight:700;line-height:1.25;letter-spacing:-.05em;margin-bottom:1.5rem;color:var(--color-text-primary)}.text-gradient{background:linear-gradient(135deg,var(--color-primary) 0%,var(--color-glow) 50%,var(--color-secondary) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}.hero-description{font-size:clamp(1rem,.9rem + .5vw,1.25rem);line-height:1.625;color:var(--color-text-secondary);max-width:600px;margin:0 auto 2rem}.hero-cta{display:flex;flex-direction:column;gap:1rem;justify-content:center;align-items:center}@media(min-width:640px){.hero-cta{flex-direction:row}}@media(min-width:1024px){.hero-cta{justify-content:flex-start}}.hero-visual{position:relative;display:flex;justify-content:center;align-items:center;min-height:400px}@media(min-width:768px){.hero-visual{min-height:500px}}.hero-3d-container{position:relative;width:100%;max-width:500px;height:500px;display:flex;justify-content:center;align-items:center}#coffee-cup-canvas{width:100%;height:100%;max-width:400px;max-height:400px}.scroll-indicator{position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);width:24px;height:40px;border:2px solid var(--color-text-tertiary);border-radius:var(--radius-full);opacity:.6}.scroll-indicator::before{content:'';position:absolute;top:8px;left:50%;width:4px;height:8px;background:var(--color-primary);border-radius:var(--radius-full);transform:translateX(-50%);animation:scroll-down 2s ease-in-out infinite}@keyframes scroll-down{0%,100%{opacity:0;transform:translateX(-50%) translateY(0)}50%{opacity:1;transform:translateX(-50%) translateY(12px)}}.section-label{display:inline-block;padding:.5rem 1rem;font-size:.875rem;font-weight:500;text-transform:uppercase;letter-spacing:.05em;color:var(--color-primary);background:rgba(212,165,116,.1);border-radius:var(--radius-full);margin-bottom:1rem}.fade-in-up{opacity:0;transform:translateY(30px);animation:fadeInUp .8s var(--ease-out) forwards}@keyframes fadeInUp{to{opacity:1;transform:translateY(0)}}.stagger-1{animation-delay:.1s}.stagger-2{animation-delay:.2s}.stagger-3{animation-delay:.3s}.navbar-menu{position:fixed;top:0;right:-100%;width:80%;max-width:400px;height:100vh;background:var(--color-bg-darker);padding:6rem 2rem;transition:right .5s cubic-bezier(.175,.885,.32,1.275);z-index:50;box-shadow:var(--shadow-lg)}.navbar-menu.active{right:0}.navbar-menu-link{display:block;padding:1rem 0;font-size:1.5rem;font-weight:600;color:var(--color-text-primary);text-decoration:none;border-bottom:1px solid var(--glass-border);transition:color var(--duration-normal) var(--ease-out)}.navbar-menu-link:hover{color:var(--color-primary);padding-left:1rem}.navbar-overlay{position:fixed;inset:0;background:rgba(0,0,0,.7);backdrop-filter:blur(4px);opacity:0;visibility:hidden;transition:all var(--duration-normal) var(--ease-out);z-index:49}.navbar-overlay.active{opacity:1;visibility:visible}a:focus-visible,button:focus-visible{outline:2px solid var(--color-primary);outline-offset:2px;border-radius:.5rem}@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}html{scroll-behavior:auto}}
-  </style>
-  
-  <!-- Non-Critical CSS - Deferred -->
-  <link rel="stylesheet" href="css/variables.css" media="print" onload="this.media='all'">
-  <link rel="stylesheet" href="css/base.css" media="print" onload="this.media='all'">
-  <link rel="stylesheet" href="css/components.css" media="print" onload="this.media='all'">
-  <link rel="stylesheet" href="css/effects.css" media="print" onload="this.media='all'">
-  <link rel="stylesheet" href="css/layout.css" media="print" onload="this.media='all'">
-  
-  <!-- Fallback for no-JS -->
-  <noscript>
-    <link rel="stylesheet" href="css/variables.css">
-    <link rel="stylesheet" href="css/base.css">
-    <link rel="stylesheet" href="css/components.css">
-    <link rel="stylesheet" href="css/effects.css">
-    <link rel="stylesheet" href="css/layout.css">
-  </noscript>
-
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>☕</text></svg>">
-  
-  <!-- Preload LCP Image (Hero Coffee Cup) -->
-  <link rel="preload" as="image" href="https://images.unsplash.com/photo-1541167760496-1628856ab772?w=800&h=600&fit=crop&auto=format" fetchpriority="high">
   
   <title>Taco Tuesday Coffee | Premium Coffee Experience</title>
 </head>
@@ -63,7 +30,9 @@
   <div class="noise-overlay" aria-hidden="true"></div>
   
   <!-- Skip Link for Accessibility -->
-  <a href="#main-content" class="sr-only">Skip to main content</a>
+  <a href="#main-content" class="sr-only" style="top: 1rem; left: 1rem; width: auto; height: auto; padding: 1rem; background: var(--color-primary); color: var(--color-bg-dark); z-index: 9999; border-radius: var(--radius-lg);">
+    Skip to main content
+  </a>
   
   <!-- ========================================
        NAVBAR - Floating Glass
@@ -72,7 +41,7 @@
     <div class="navbar-container">
       <!-- Logo -->
       <a href="#" class="navbar-logo">
-        <svg class="navbar-logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <svg class="navbar-logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <path d="M18 8h1a4 4 0 0 1 0 8h-1"></path>
           <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path>
           <line x1="6" y1="1" x2="6" y2="4"></line>
@@ -107,7 +76,7 @@
       </div>
       
       <!-- Mobile Menu Toggle -->
-      <button class="navbar-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-menu">
+      <button class="navbar-toggle" aria-label="Toggle menu" aria-expanded="false">
         <span></span>
         <span></span>
         <span></span>
@@ -117,7 +86,7 @@
   
   <!-- Mobile Menu -->
   <div class="navbar-overlay" aria-hidden="true"></div>
-  <nav class="navbar-menu" id="mobile-menu" aria-label="Mobile navigation" hidden>
+  <nav class="navbar-menu" aria-label="Mobile navigation">
     <ul>
       <li>
         <a href="#home" class="navbar-menu-link">Home</a>
@@ -145,7 +114,7 @@
     <!-- ========================================
          HERO SECTION
          ======================================== -->
-    <section id="home" class="hero" aria-label="Introduction">
+    <section id="home" class="hero mesh-gradient">
       <div class="hero-container">
         <!-- Hero Content -->
         <div class="hero-content">
@@ -161,7 +130,7 @@
           <div class="hero-cta fade-in-up stagger-3">
             <a href="#menu" class="btn btn-primary btn-lg">
               Explore Menu
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M5 12h14M12 5l7 7-7 7"/>
               </svg>
             </a>
@@ -175,7 +144,7 @@
         <!-- 3D Coffee Cup Container -->
         <div class="hero-visual fade-in-up stagger-2">
           <div class="hero-3d-container">
-            <canvas id="coffee-cup-canvas" aria-label="Animated 3D coffee cup" role="img"></canvas>
+            <canvas id="coffee-cup-canvas" aria-label="3D animated coffee cup"></canvas>
             <!-- Steam Effect -->
             <div class="steam-container" aria-hidden="true">
               <div class="steam-particle"></div>
@@ -200,12 +169,12 @@
     <!-- ========================================
          MENU HIGHLIGHTS SECTION
          ======================================== -->
-    <section id="menu" class="section menu-section" aria-labelledby="menu-heading">
+    <section id="menu" class="section menu-section">
       <div class="container">
         <!-- Section Header -->
         <div class="section-header">
           <span class="section-label">Our Menu</span>
-          <h2 id="menu-heading" class="section-title">Signature Drinks</h2>
+          <h2 class="section-title">Signature Drinks</h2>
           <p class="section-description">
             Handcrafted beverages made with premium beans and a whole lot of love. 
             Each sip is a journey to flavor town.
@@ -217,17 +186,12 @@
           <!-- Menu Item 1 -->
           <article class="card card-hover-glow" data-aos="fade-up">
             <span class="card-badge">Bestseller</span>
-            <picture>
-              <source srcset="https://images.unsplash.com/photo-1541167760496-1628856ab772?w=400&h=300&fit=crop&auto=format&fm=webp" type="image/webp">
-              <img 
-                src="https://images.unsplash.com/photo-1541167760496-1628856ab772?w=400&h=300&fit=crop" 
-                alt="Taco Latte - our signature latte with a secret spice blend"
-                class="card-image"
-                loading="lazy"
-                width="400"
-                height="300"
-              >
-            </picture>
+            <img 
+              src="https://images.unsplash.com/photo-1541167760496-1628856ab772?w=600&h=400&fit=crop" 
+              alt="Taco Latte - our signature latte with a secret spice blend"
+              class="card-image"
+              loading="lazy"
+            >
             <div class="card-content">
               <h3 class="card-title">Taco Latte</h3>
               <p class="card-description">
@@ -239,17 +203,12 @@
           
           <!-- Menu Item 2 -->
           <article class="card card-hover-glow" data-aos="fade-up">
-            <picture>
-              <source srcset="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=400&h=300&fit=crop&auto=format&fm=webp" type="image/webp">
-              <img 
-                src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=400&h=300&fit=crop" 
-                alt="Espresso Crunch - bold espresso with chocolate shavings"
-                class="card-image"
-                loading="lazy"
-                width="400"
-                height="300"
-              >
-            </picture>
+            <img 
+              src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=600&h=400&fit=crop" 
+              alt="Espresso Crunch - bold espresso with chocolate shavings"
+              class="card-image"
+              loading="lazy"
+            >
             <div class="card-content">
               <h3 class="card-title">Espresso Crunch</h3>
               <p class="card-description">
@@ -261,17 +220,12 @@
           
           <!-- Menu Item 3 -->
           <article class="card card-hover-glow" data-aos="fade-up">
-            <picture>
-              <source srcset="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=400&h=300&fit=crop&auto=format&fm=webp" type="image/webp">
-              <img 
-                src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=400&h=300&fit=crop" 
-                alt="Caramel Cloud - fluffy caramel frappe"
-                class="card-image"
-                loading="lazy"
-                width="400"
-                height="300"
-              >
-            </picture>
+            <img 
+              src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=600&h=400&fit=crop" 
+              alt="Caramel Cloud - fluffy caramel frappe"
+              class="card-image"
+              loading="lazy"
+            >
             <div class="card-content">
               <h3 class="card-title">Caramel Cloud</h3>
               <p class="card-description">
@@ -284,17 +238,12 @@
           <!-- Menu Item 4 -->
           <article class="card card-hover-glow" data-aos="fade-up">
             <span class="card-badge">New</span>
-            <picture>
-              <source srcset="https://images.unsplash.com/photo-1572442388796-11668a67e53d?w=400&h=300&fit=crop&auto=format&fm=webp" type="image/webp">
-              <img 
-                src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?w=400&h=300&fit=crop" 
-                alt="Mocha Madness - rich chocolate mocha"
-                class="card-image"
-                loading="lazy"
-                width="400"
-                height="300"
-              >
-            </picture>
+            <img 
+              src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?w=600&h=400&fit=crop" 
+              alt="Mocha Madness - rich chocolate mocha"
+              class="card-image"
+              loading="lazy"
+            >
             <div class="card-content">
               <h3 class="card-title">Mocha Madness</h3>
               <p class="card-description">
@@ -306,17 +255,12 @@
           
           <!-- Menu Item 5 -->
           <article class="card card-hover-glow" data-aos="fade-up">
-            <picture>
-              <source srcset="https://images.unsplash.com/photo-1517701604599-bb29b5c7fa39?w=400&h=300&fit=crop&auto=format&fm=webp" type="image/webp">
-              <img 
-                src="https://images.unsplash.com/photo-1517701604599-bb29b5c7fa39?w=400&h=300&fit=crop" 
-                alt="Vanilla Vibes - smooth vanilla bean latte"
-                class="card-image"
-                loading="lazy"
-                width="400"
-                height="300"
-              >
-            </picture>
+            <img 
+              src="https://images.unsplash.com/photo-1517701604599-bb29b5c7fa39?w=600&h=400&fit=crop" 
+              alt="Vanilla Vibes - smooth vanilla bean latte"
+              class="card-image"
+              loading="lazy"
+            >
             <div class="card-content">
               <h3 class="card-title">Vanilla Vibes</h3>
               <p class="card-description">
@@ -328,17 +272,12 @@
           
           <!-- Menu Item 6 -->
           <article class="card card-hover-glow" data-aos="fade-up">
-            <picture>
-              <source srcset="https://images.unsplash.com/photo-1570968992193-6e5c922c4483?w=400&h=300&fit=crop&auto=format&fm=webp" type="image/webp">
-              <img 
-                src="https://images.unsplash.com/photo-1570968992193-6e5c922c4483?w=400&h=300&fit=crop" 
-                alt="Cold Brew Classic - smooth cold brew coffee"
-                class="card-image"
-                loading="lazy"
-                width="400"
-                height="300"
-              >
-            </picture>
+            <img 
+              src="https://images.unsplash.com/photo-1570968992193-6e5c922c4483?w=600&h=400&fit=crop" 
+              alt="Cold Brew Classic - smooth cold brew coffee"
+              class="card-image"
+              loading="lazy"
+            >
             <div class="card-content">
               <h3 class="card-title">Cold Brew Classic</h3>
               <p class="card-description">
@@ -353,7 +292,7 @@
         <div class="text-center mt-16">
           <a href="#" class="btn btn-outline btn-lg">
             View Full Menu
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <path d="M5 12h14M12 5l7 7-7 7"/>
             </svg>
           </a>
@@ -364,43 +303,33 @@
     <!-- ========================================
          ABOUT SECTION
          ======================================== -->
-    <section id="about" class="section about-section" aria-labelledby="about-heading">
+    <section id="about" class="section about-section">
       <div class="container">
         <div class="about-grid">
           <!-- Image Column -->
           <div class="about-images">
             <div class="about-image-wrapper" data-parallax="fast">
-              <picture>
-                <source srcset="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=600&h=800&fit=crop&auto=format&fm=webp" type="image/webp">
-                <img 
-                  src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=600&h=800&fit=crop" 
-                  alt="Our cozy coffee shop interior with warm lighting"
-                  class="about-image about-image-1"
-                  loading="lazy"
-                  width="600"
-                  height="800"
-                >
-              </picture>
+              <img 
+                src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=600&h=800&fit=crop" 
+                alt="Our cozy coffee shop interior"
+                class="about-image about-image-1"
+                loading="lazy"
+              >
             </div>
             <div class="about-image-wrapper" data-parallax="slow">
-              <picture>
-                <source srcset="https://images.unsplash.com/photo-1497935586351-b67a49e012bf?w=400&h=500&fit=crop&auto=format&fm=webp" type="image/webp">
-                <img 
-                  src="https://images.unsplash.com/photo-1497935586351-b67a49e012bf?w=400&h=500&fit=crop" 
-                  alt="Barista carefully pouring latte art into a cup"
-                  class="about-image about-image-2"
-                  loading="lazy"
-                  width="400"
-                  height="500"
-                >
-              </picture>
+              <img 
+                src="https://images.unsplash.com/photo-1497935586351-b67a49e012bf?w=400&h=500&fit=crop" 
+                alt="Barista pouring latte art"
+                class="about-image about-image-2"
+                loading="lazy"
+              >
             </div>
           </div>
           
           <!-- Content Column -->
           <div class="about-content">
             <span class="section-label">Our Story</span>
-            <h2 id="about-heading" class="section-title text-left">
+            <h2 class="section-title text-left">
               Brewed with <span class="text-gradient">Passion</span>
             </h2>
             <p class="about-text">
@@ -416,7 +345,7 @@
             <!-- Features -->
             <ul class="about-features">
               <li class="about-feature">
-                <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
                   <polyline points="22 4 12 14.01 9 11.01"></polyline>
                 </svg>
@@ -426,7 +355,7 @@
                 </div>
               </li>
               <li class="about-feature">
-                <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
                 </svg>
                 <div>
@@ -435,7 +364,7 @@
                 </div>
               </li>
               <li class="about-feature">
-                <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
                   <circle cx="9" cy="7" r="4"></circle>
                   <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
@@ -456,13 +385,13 @@
     
     <!-- ========================================
          TESTIMONIALS SECTION
-         ======================================== -->
-    <section id="testimonials" class="section testimonials-section" aria-labelledby="testimonials-heading">
+       ======================================== -->
+    <section id="testimonials" class="section testimonials-section">
       <div class="container">
         <!-- Section Header -->
         <div class="section-header">
           <span class="section-label">Testimonials</span>
-          <h2 id="testimonials-heading" class="section-title">What People Say</h2>
+          <h2 class="section-title">What People Say</h2>
           <p class="section-description">
             Don't just take our word for it. Here's what our amazing customers 
             have to say about their Taco Tuesday experience.
@@ -470,17 +399,17 @@
         </div>
         
         <!-- Testimonials Carousel -->
-        <div class="testimonials-carousel" aria-roledescription="carousel" aria-label="Customer testimonials" role="region">
+        <div class="testimonials-carousel" aria-roledescription="carousel">
           <div class="testimonials-track">
             <!-- Testimonial 1 -->
             <div class="testimonial-card card glass-panel">
               <div class="testimonial-content">
                 <div class="testimonial-stars" aria-label="5 out of 5 stars">
-                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
                 </div>
                 <p class="testimonial-text">
                   Best coffee I've had in years! The Taco Latte is absolutely incredible. 
@@ -488,12 +417,10 @@
                 </p>
                 <div class="testimonial-author">
                   <img 
-                    src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop&auto=format&fm=webp" 
-                    alt="Sarah M., Coffee Enthusiast"
+                    src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop" 
+                    alt="Sarah M."
                     class="testimonial-avatar"
                     loading="lazy"
-                    width="100"
-                    height="100"
                   >
                   <div>
                     <p class="testimonial-name">Sarah M.</p>
@@ -507,11 +434,11 @@
             <div class="testimonial-card card glass-panel">
               <div class="testimonial-content">
                 <div class="testimonial-stars" aria-label="5 out of 5 stars">
-                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
                 </div>
                 <p class="testimonial-text">
                   The atmosphere is amazing and the staff treats you like family. 
@@ -519,12 +446,10 @@
                 </p>
                 <div class="testimonial-author">
                   <img 
-                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&auto=format&fm=webp" 
-                    alt="James R., Regular Customer"
+                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop" 
+                    alt="James R."
                     class="testimonial-avatar"
                     loading="lazy"
-                    width="100"
-                    height="100"
                   >
                   <div>
                     <p class="testimonial-name">James R.</p>
@@ -538,11 +463,11 @@
             <div class="testimonial-card card glass-panel">
               <div class="testimonial-content">
                 <div class="testimonial-stars" aria-label="5 out of 5 stars">
-                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
                 </div>
                 <p class="testimonial-text">
                   Finally, a coffee shop that gets it right! The attention to detail 
@@ -550,12 +475,10 @@
                 </p>
                 <div class="testimonial-author">
                   <img 
-                    src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&auto=format&fm=webp" 
-                    alt="Emily T., Food Blogger"
+                    src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop" 
+                    alt="Emily T."
                     class="testimonial-avatar"
                     loading="lazy"
-                    width="100"
-                    height="100"
                   >
                   <div>
                     <p class="testimonial-name">Emily T.</p>
@@ -570,12 +493,12 @@
         <!-- Carousel Navigation -->
         <div class="carousel-nav">
           <button class="carousel-btn carousel-prev" aria-label="Previous testimonial">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <path d="M15 18l-6-6 6-6"/>
             </svg>
           </button>
           <button class="carousel-btn carousel-next" aria-label="Next testimonial">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <path d="M9 18l6-6-6-6"/>
             </svg>
           </button>
@@ -586,7 +509,7 @@
     <!-- ========================================
          LOCATION & HOURS SECTION
          ======================================== -->
-    <section id="location" class="section location-section" aria-labelledby="location-heading">
+    <section id="location" class="section location-section">
       <div class="container">
         <div class="location-grid">
           <!-- Map -->
@@ -599,7 +522,7 @@
               allowfullscreen=""
               loading="lazy"
               referrerpolicy="no-referrer-when-downgrade"
-              title="Taco Tuesday Coffee Location on Google Maps"
+              title="Taco Tuesday Coffee Location"
               aria-label="Map showing Taco Tuesday Coffee location"
             ></iframe>
           </div>
@@ -607,11 +530,11 @@
           <!-- Info -->
           <div class="location-info">
             <span class="section-label">Visit Us</span>
-            <h2 id="location-heading" class="section-title text-left">Find Your Way to Flavor</h2>
+            <h2 class="section-title text-left">Find Your Way to Flavor</h2>
             
             <!-- Address -->
             <div class="info-block">
-              <div class="info-icon" aria-hidden="true">
+              <div class="info-icon">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
                   <circle cx="12" cy="10" r="3"></circle>
@@ -625,7 +548,7 @@
             
             <!-- Hours -->
             <div class="info-block">
-              <div class="info-icon" aria-hidden="true">
+              <div class="info-icon">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <circle cx="12" cy="12" r="10"></circle>
                   <polyline points="12 6 12 12 16 14"></polyline>
@@ -643,7 +566,7 @@
             
             <!-- Contact -->
             <div class="info-block">
-              <div class="info-icon" aria-hidden="true">
+              <div class="info-icon">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
                 </svg>
@@ -657,7 +580,7 @@
             <!-- CTA -->
             <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg mt-8">
               Get Directions
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M5 12h14M12 5l7 7-7 7"/>
               </svg>
             </a>
@@ -665,24 +588,24 @@
             <!-- Social Links -->
             <div class="social-links mt-8">
               <a href="#" class="social-link" aria-label="Follow us on Instagram">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
                   <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
                   <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
                 </svg>
               </a>
               <a href="#" class="social-link" aria-label="Follow us on Facebook">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
                 </svg>
               </a>
               <a href="#" class="social-link" aria-label="Follow us on Twitter">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
                 </svg>
               </a>
               <a href="#" class="social-link" aria-label="Follow us on TikTok">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/>
                 </svg>
               </a>
@@ -697,13 +620,13 @@
   <!-- ========================================
        FOOTER
        ======================================== -->
-  <footer class="footer" role="contentinfo">
+  <footer class="footer">
     <div class="container">
       <div class="footer-content">
         <!-- Brand -->
         <div class="footer-brand">
           <a href="#" class="navbar-logo">
-            <svg class="navbar-logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <svg class="navbar-logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <path d="M18 8h1a4 4 0 0 1 0 8h-1"></path>
               <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path>
               <line x1="6" y1="1" x2="6" y2="4"></line>
@@ -749,12 +672,12 @@
             <input 
               type="email" 
               placeholder="Enter your email" 
-              aria-label="Email address for newsletter"
+              aria-label="Email address"
               class="form-input"
               required
             >
-            <button type="submit" class="btn btn-primary" aria-label="Subscribe to newsletter">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <button type="submit" class="btn btn-primary">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <line x1="22" y1="2" x2="11" y2="13"></line>
                 <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
               </svg>
@@ -766,20 +689,20 @@
       <!-- Bottom Bar -->
       <div class="footer-bottom">
         <p>&copy; 2025 Taco Tuesday Coffee. All rights reserved.</p>
-        <p>Crafted with <span aria-label="love">☕</span> and <span aria-label="and">❤️</span></p>
+        <p>Crafted with ☕ and ❤️</p>
       </div>
     </div>
   </footer>
   
-  <!-- Scripts - Deferred -->
+  <!-- Scripts -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
-  <script src="js/coffee-cup-3d.js" defer></script>
-  <script src="js/steam-effect.js" defer></script>
-  <script src="js/animations.js" defer></script>
-  <script src="js/navbar.js" defer></script>
-  <script src="js/testimonials.js" defer></script>
-  <script src="js/parallax.js" defer></script>
+  <script src="js/coffee-cup-3d.js"></script>
+  <script src="js/steam-effect.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/navbar.js"></script>
+  <script src="js/testimonials.js"></script>
+  <script src="js/parallax.js"></script>
 </body>
 </html>

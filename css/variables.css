@@ -35,10 +35,10 @@
   --color-glow-soft: rgba(232, 184, 109, 0.3);
   --color-glow-medium: rgba(232, 184, 109, 0.5);
   
-  /* Text Colors - Dark Mode (WCAG AA Compliant - 4.5:1+ contrast) */
-  --color-text-primary: #F5EFE6;   /* Cream for headings - 15.5:1 */
-  --color-text-secondary: #B8A894; /* Muted text - 7.2:1 (was #C9B8A4) */
-  --color-text-tertiary: #8A7B6C;  /* Subtle text - 4.6:1 (was #9A8B7C) */
+  /* Text Colors - Dark Mode */
+  --color-text-primary: #F5EFE6;   /* Cream for headings */
+  --color-text-secondary: #C9B8A4; /* Muted text */
+  --color-text-tertiary: #9A8B7C;  /* Subtle text */
   
   /* Text Colors - Light Mode */
   --color-text-dark: #1A1512;      /* Espresso for headings */
