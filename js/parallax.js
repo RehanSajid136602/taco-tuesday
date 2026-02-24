@@ -2,7 +2,8 @@
  * ========================================
  * TACO TUESDAY - Parallax Effects
  * ========================================
- * Simple, reliable scroll-based parallax
+ * Optimized scroll-based parallax with
+ * debouncing and reduced motion support
  * ======================================== */
 
 (function() {
@@ -23,6 +24,19 @@
     parallaxWrappers.forEach(wrapper => {
       initParallax(wrapper);
     });
+  }
+
+  // Debounce helper for performance
+  function debounce(func, wait) {
+    let timeout;
+    return function executedFunction(...args) {
+      const later = () => {
+        clearTimeout(timeout);
+        func(...args);
+      };
+      clearTimeout(timeout);
+      timeout = setTimeout(later, wait);
+    };
   }
 
   function initParallax(wrapper) {
@@ -54,8 +68,16 @@
         ease: 'none'
       });
     } else {
-      // Fallback - no parallax, just show image
-      image.style.transform = 'scale(1.05)';
+      // Fallback - debounced scroll handler
+      const handleScroll = debounce(() => {
+        const rect = wrapper.getBoundingClientRect();
+        const scrollProgress = Math.max(0, Math.min(1, 1 - (rect.top / window.innerHeight)));
+        const yPos = scrollProgress * 100 * speed;
+        image.style.transform = `translateY(${yPos}px) scale(1.05)`;
+      }, 10);
+
+      window.addEventListener('scroll', handleScroll, { passive: true });
+      handleScroll(); // Initial call
     }
   }
 })();
