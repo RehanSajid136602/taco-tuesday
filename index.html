@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Taco Tuesday Coffee - Where premium coffee meets unexpected flavor. Experience our signature blends in a modern, welcoming atmosphere.">
+  <meta name="theme-color" content="#1A1512">
+  
+  <!-- Preconnect to Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+  <!-- Google Fonts - General Sans -->
+  <link href="https://fonts.googleapis.com/css2?family=General+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/effects.css">
+  <link rel="stylesheet" href="css/layout.css">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>☕</text></svg>">
+  
+  <title>Taco Tuesday Coffee | Premium Coffee Experience</title>
+</head>
+<body>
+  <!-- Noise Texture Overlay -->
+  <div class="noise-overlay" aria-hidden="true"></div>
+  
+  <!-- Skip Link for Accessibility -->
+  <a href="#main-content" class="sr-only" style="top: 1rem; left: 1rem; width: auto; height: auto; padding: 1rem; background: var(--color-primary); color: var(--color-bg-dark); z-index: 9999; border-radius: var(--radius-lg);">
+    Skip to main content
+  </a>
+  
+  <!-- ========================================
+       NAVBAR - Floating Glass
+       ======================================== -->
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="navbar-container">
+      <!-- Logo -->
+      <a href="#" class="navbar-logo">
+        <svg class="navbar-logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M18 8h1a4 4 0 0 1 0 8h-1"></path>
+          <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path>
+          <line x1="6" y1="1" x2="6" y2="4"></line>
+          <line x1="10" y1="1" x2="10" y2="4"></line>
+          <line x1="14" y1="1" x2="14" y2="4"></line>
+        </svg>
+        <span>Taco Tuesday</span>
+      </a>
+      
+      <!-- Desktop Navigation -->
+      <ul class="navbar-nav">
+        <li>
+          <a href="#home" class="navbar-link active">Home</a>
+        </li>
+        <li>
+          <a href="#menu" class="navbar-link">Menu</a>
+        </li>
+        <li>
+          <a href="#about" class="navbar-link">About</a>
+        </li>
+        <li>
+          <a href="#testimonials" class="navbar-link">Reviews</a>
+        </li>
+        <li>
+          <a href="#location" class="navbar-link">Visit</a>
+        </li>
+      </ul>
+      
+      <!-- CTA Button -->
+      <div class="navbar-cta">
+        <a href="#menu" class="btn btn-primary">Order Now</a>
+      </div>
+      
+      <!-- Mobile Menu Toggle -->
+      <button class="navbar-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+  
+  <!-- Mobile Menu -->
+  <div class="navbar-overlay" aria-hidden="true"></div>
+  <nav class="navbar-menu" aria-label="Mobile navigation">
+    <ul>
+      <li>
+        <a href="#home" class="navbar-menu-link">Home</a>
+      </li>
+      <li>
+        <a href="#menu" class="navbar-menu-link">Menu</a>
+      </li>
+      <li>
+        <a href="#about" class="navbar-menu-link">About</a>
+      </li>
+      <li>
+        <a href="#testimonials" class="navbar-menu-link">Reviews</a>
+      </li>
+      <li>
+        <a href="#location" class="navbar-menu-link">Visit</a>
+      </li>
+    </ul>
+  </nav>
+  
+  <!-- ========================================
+       MAIN CONTENT
+       ======================================== -->
+  <main id="main-content">
+    
+    <!-- ========================================
+         HERO SECTION
+         ======================================== -->
+    <section id="home" class="hero mesh-gradient">
+      <div class="hero-container">
+        <!-- Hero Content -->
+        <div class="hero-content">
+          <span class="section-label fade-in-up">Welcome to Taco Tuesday</span>
+          <h1 class="hero-title fade-in-up stagger-1">
+            Coffee That Hits
+            <span class="text-gradient">Different</span>
+          </h1>
+          <p class="hero-description fade-in-up stagger-2">
+            Where Taco Tuesday meets every day — premium coffee crafted with passion, 
+            served with a twist that keeps you coming back for more.
+          </p>
+          <div class="hero-cta fade-in-up stagger-3">
+            <a href="#menu" class="btn btn-primary btn-lg">
+              Explore Menu
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </a>
+            <a href="#about" class="btn btn-outline btn-lg">Our Story</a>
+          </div>
+          
+          <!-- Scroll Indicator -->
+          <div class="scroll-indicator" aria-hidden="true"></div>
+        </div>
+        
+        <!-- 3D Coffee Cup Container -->
+        <div class="hero-visual fade-in-up stagger-2">
+          <div class="hero-3d-container">
+            <canvas id="coffee-cup-canvas" aria-label="3D animated coffee cup"></canvas>
+            <!-- Steam Effect -->
+            <div class="steam-container" aria-hidden="true">
+              <div class="steam-particle"></div>
+              <div class="steam-particle"></div>
+              <div class="steam-particle"></div>
+              <div class="steam-particle"></div>
+              <div class="steam-particle"></div>
+              <div class="steam-particle"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Hero Background Decorations -->
+      <div class="hero-bg-decoration" aria-hidden="true">
+        <div class="hero-bg-circle hero-bg-circle-1"></div>
+        <div class="hero-bg-circle hero-bg-circle-2"></div>
+        <div class="hero-bg-circle hero-bg-circle-3"></div>
+      </div>
+    </section>
+    
+    <!-- ========================================
+         MENU HIGHLIGHTS SECTION
+         ======================================== -->
+    <section id="menu" class="section menu-section">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="section-header">
+          <span class="section-label">Our Menu</span>
+          <h2 class="section-title">Signature Drinks</h2>
+          <p class="section-description">
+            Handcrafted beverages made with premium beans and a whole lot of love. 
+            Each sip is a journey to flavor town.
+          </p>
+        </div>
+        
+        <!-- Menu Grid -->
+        <div class="menu-grid">
+          <!-- Menu Item 1 -->
+          <article class="card card-hover-glow" data-aos="fade-up">
+            <span class="card-badge">Bestseller</span>
+            <img 
+              src="https://images.unsplash.com/photo-1541167760496-1628856ab772?w=600&h=400&fit=crop" 
+              alt="Taco Latte - our signature latte with a secret spice blend"
+              class="card-image"
+              loading="lazy"
+            >
+            <div class="card-content">
+              <h3 class="card-title">Taco Latte</h3>
+              <p class="card-description">
+                Our signature latte with espresso, steamed milk, and a hint of cinnamon and caramel.
+              </p>
+              <span class="card-price">$5.99</span>
+            </div>
+          </article>
+          
+          <!-- Menu Item 2 -->
+          <article class="card card-hover-glow" data-aos="fade-up">
+            <img 
+              src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=600&h=400&fit=crop" 
+              alt="Espresso Crunch - bold espresso with chocolate shavings"
+              class="card-image"
+              loading="lazy"
+            >
+            <div class="card-content">
+              <h3 class="card-title">Espresso Crunch</h3>
+              <p class="card-description">
+                Double shot espresso topped with dark chocolate shavings and whipped cream.
+              </p>
+              <span class="card-price">$4.49</span>
+            </div>
+          </article>
+          
+          <!-- Menu Item 3 -->
+          <article class="card card-hover-glow" data-aos="fade-up">
+            <img 
+              src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=600&h=400&fit=crop" 
+              alt="Caramel Cloud - fluffy caramel frappe"
+              class="card-image"
+              loading="lazy"
+            >
+            <div class="card-content">
+              <h3 class="card-title">Caramel Cloud</h3>
+              <p class="card-description">
+                Blended ice, caramel syrup, espresso, topped with whipped cream and drizzle.
+              </p>
+              <span class="card-price">$6.49</span>
+            </div>
+          </article>
+          
+          <!-- Menu Item 4 -->
+          <article class="card card-hover-glow" data-aos="fade-up">
+            <span class="card-badge">New</span>
+            <img 
+              src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?w=600&h=400&fit=crop" 
+              alt="Mocha Madness - rich chocolate mocha"
+              class="card-image"
+              loading="lazy"
+            >
+            <div class="card-content">
+              <h3 class="card-title">Mocha Madness</h3>
+              <p class="card-description">
+                Rich chocolate meets bold espresso. Topped with marshmallow fluff.
+              </p>
+              <span class="card-price">$5.79</span>
+            </div>
+          </article>
+          
+          <!-- Menu Item 5 -->
+          <article class="card card-hover-glow" data-aos="fade-up">
+            <img 
+              src="https://images.unsplash.com/photo-1517701604599-bb29b5c7fa39?w=600&h=400&fit=crop" 
+              alt="Vanilla Vibes - smooth vanilla bean latte"
+              class="card-image"
+              loading="lazy"
+            >
+            <div class="card-content">
+              <h3 class="card-title">Vanilla Vibes</h3>
+              <p class="card-description">
+                Smooth vanilla bean latte with Madagascar vanilla and velvety microfoam.
+              </p>
+              <span class="card-price">$5.49</span>
+            </div>
+          </article>
+          
+          <!-- Menu Item 6 -->
+          <article class="card card-hover-glow" data-aos="fade-up">
+            <img 
+              src="https://images.unsplash.com/photo-1570968992193-6e5c922c4483?w=600&h=400&fit=crop" 
+              alt="Cold Brew Classic - smooth cold brew coffee"
+              class="card-image"
+              loading="lazy"
+            >
+            <div class="card-content">
+              <h3 class="card-title">Cold Brew Classic</h3>
+              <p class="card-description">
+                Slow-steeped for 18 hours. Smooth, bold, and perfectly caffeinated.
+              </p>
+              <span class="card-price">$4.99</span>
+            </div>
+          </article>
+        </div>
+        
+        <!-- View Full Menu CTA -->
+        <div class="text-center mt-16">
+          <a href="#" class="btn btn-outline btn-lg">
+            View Full Menu
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+    
+    <!-- ========================================
+         ABOUT SECTION
+         ======================================== -->
+    <section id="about" class="section about-section">
+      <div class="container">
+        <div class="about-grid">
+          <!-- Image Column -->
+          <div class="about-images">
+            <div class="about-image-wrapper" data-parallax="fast">
+              <img 
+                src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=600&h=800&fit=crop" 
+                alt="Our cozy coffee shop interior"
+                class="about-image about-image-1"
+                loading="lazy"
+              >
+            </div>
+            <div class="about-image-wrapper" data-parallax="slow">
+              <img 
+                src="https://images.unsplash.com/photo-1497935586351-b67a49e012bf?w=400&h=500&fit=crop" 
+                alt="Barista pouring latte art"
+                class="about-image about-image-2"
+                loading="lazy"
+              >
+            </div>
+          </div>
+          
+          <!-- Content Column -->
+          <div class="about-content">
+            <span class="section-label">Our Story</span>
+            <h2 class="section-title text-left">
+              Brewed with <span class="text-gradient">Passion</span>
+            </h2>
+            <p class="about-text">
+              Taco Tuesday started with a simple idea: what if every day felt like a celebration? 
+              We combine the vibrant energy of Taco Tuesday with the comforting ritual of premium coffee.
+            </p>
+            <p class="about-text">
+              Our beans are ethically sourced from sustainable farms across three continents, 
+              roasted to perfection in small batches, and brewed with precision by our 
+              passionate team of coffee artisans.
+            </p>
+            
+            <!-- Features -->
+            <ul class="about-features">
+              <li class="about-feature">
+                <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                  <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                </svg>
+                <div>
+                  <strong>Ethically Sourced</strong>
+                  <span>Direct trade with farmers</span>
+                </div>
+              </li>
+              <li class="about-feature">
+                <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                </svg>
+                <div>
+                  <strong>Small Batch Roasted</strong>
+                  <span>Freshness guaranteed</span>
+                </div>
+              </li>
+              <li class="about-feature">
+                <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="9" cy="7" r="4"></circle>
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                </svg>
+                <div>
+                  <strong>Expert Baristas</strong>
+                  <span>Certified coffee artisans</span>
+                </div>
+              </li>
+            </ul>
+            
+            <a href="#location" class="btn btn-primary btn-lg mt-8">Visit Us Today</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- ========================================
+         TESTIMONIALS SECTION
+       ======================================== -->
+    <section id="testimonials" class="section testimonials-section">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="section-header">
+          <span class="section-label">Testimonials</span>
+          <h2 class="section-title">What People Say</h2>
+          <p class="section-description">
+            Don't just take our word for it. Here's what our amazing customers 
+            have to say about their Taco Tuesday experience.
+          </p>
+        </div>
+        
+        <!-- Testimonials Carousel -->
+        <div class="testimonials-carousel" aria-roledescription="carousel">
+          <div class="testimonials-track">
+            <!-- Testimonial 1 -->
+            <div class="testimonial-card card glass-panel">
+              <div class="testimonial-content">
+                <div class="testimonial-stars" aria-label="5 out of 5 stars">
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                </div>
+                <p class="testimonial-text">
+                  Best coffee I've had in years! The Taco Latte is absolutely incredible. 
+                  The vibe here is unmatched — it's like a party in your mouth.
+                </p>
+                <div class="testimonial-author">
+                  <img 
+                    src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop" 
+                    alt="Sarah M."
+                    class="testimonial-avatar"
+                    loading="lazy"
+                  >
+                  <div>
+                    <p class="testimonial-name">Sarah M.</p>
+                    <p class="testimonial-role">Coffee Enthusiast</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Testimonial 2 -->
+            <div class="testimonial-card card glass-panel">
+              <div class="testimonial-content">
+                <div class="testimonial-stars" aria-label="5 out of 5 stars">
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                </div>
+                <p class="testimonial-text">
+                  The atmosphere is amazing and the staff treats you like family. 
+                  I come here every morning before work. It's my happy place!
+                </p>
+                <div class="testimonial-author">
+                  <img 
+                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop" 
+                    alt="James R."
+                    class="testimonial-avatar"
+                    loading="lazy"
+                  >
+                  <div>
+                    <p class="testimonial-name">James R.</p>
+                    <p class="testimonial-role">Regular Customer</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Testimonial 3 -->
+            <div class="testimonial-card card glass-panel">
+              <div class="testimonial-content">
+                <div class="testimonial-stars" aria-label="5 out of 5 stars">
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                </div>
+                <p class="testimonial-text">
+                  Finally, a coffee shop that gets it right! The attention to detail 
+                  in every cup is impressive. The Cold Brew is perfection.
+                </p>
+                <div class="testimonial-author">
+                  <img 
+                    src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop" 
+                    alt="Emily T."
+                    class="testimonial-avatar"
+                    loading="lazy"
+                  >
+                  <div>
+                    <p class="testimonial-name">Emily T.</p>
+                    <p class="testimonial-role">Food Blogger</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Carousel Navigation -->
+        <div class="carousel-nav">
+          <button class="carousel-btn carousel-prev" aria-label="Previous testimonial">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M15 18l-6-6 6-6"/>
+            </svg>
+          </button>
+          <button class="carousel-btn carousel-next" aria-label="Next testimonial">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M9 18l6-6-6-6"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </section>
+    
+    <!-- ========================================
+         LOCATION & HOURS SECTION
+         ======================================== -->
+    <section id="location" class="section location-section">
+      <div class="container">
+        <div class="location-grid">
+          <!-- Map -->
+          <div class="map-wrapper">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.1422937950147!2d-73.98731968459391!3d40.74844097932847!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a9b3117469%3A0xd134e199a405a163!2sEmpire%20State%20Building!5e0!3m2!1sen!2sus!4v1234567890"
+              width="100%"
+              height="100%"
+              style="border:0; border-radius: var(--radius-2xl);"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Taco Tuesday Coffee Location"
+              aria-label="Map showing Taco Tuesday Coffee location"
+            ></iframe>
+          </div>
+          
+          <!-- Info -->
+          <div class="location-info">
+            <span class="section-label">Visit Us</span>
+            <h2 class="section-title text-left">Find Your Way to Flavor</h2>
+            
+            <!-- Address -->
+            <div class="info-block">
+              <div class="info-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+              </div>
+              <div>
+                <strong>Location</strong>
+                <p>123 Coffee Street<br>Brew City, BC 12345</p>
+              </div>
+            </div>
+            
+            <!-- Hours -->
+            <div class="info-block">
+              <div class="info-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+              </div>
+              <div>
+                <strong>Hours</strong>
+                <ul class="hours-list">
+                  <li><span>Mon - Fri</span><span>6:00 AM - 8:00 PM</span></li>
+                  <li><span>Saturday</span><span>7:00 AM - 9:00 PM</span></li>
+                  <li><span>Sunday</span><span>8:00 AM - 6:00 PM</span></li>
+                </ul>
+              </div>
+            </div>
+            
+            <!-- Contact -->
+            <div class="info-block">
+              <div class="info-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                </svg>
+              </div>
+              <div>
+                <strong>Contact</strong>
+                <p>hello@tacotuesday.coffee<br>(555) 123-4567</p>
+              </div>
+            </div>
+            
+            <!-- CTA -->
+            <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg mt-8">
+              Get Directions
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </a>
+            
+            <!-- Social Links -->
+            <div class="social-links mt-8">
+              <a href="#" class="social-link" aria-label="Follow us on Instagram">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                </svg>
+              </a>
+              <a href="#" class="social-link" aria-label="Follow us on Facebook">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                </svg>
+              </a>
+              <a href="#" class="social-link" aria-label="Follow us on Twitter">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+                </svg>
+              </a>
+              <a href="#" class="social-link" aria-label="Follow us on TikTok">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+  </main>
+  
+  <!-- ========================================
+       FOOTER
+       ======================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <!-- Brand -->
+        <div class="footer-brand">
+          <a href="#" class="navbar-logo">
+            <svg class="navbar-logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M18 8h1a4 4 0 0 1 0 8h-1"></path>
+              <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path>
+              <line x1="6" y1="1" x2="6" y2="4"></line>
+              <line x1="10" y1="1" x2="10" y2="4"></line>
+              <line x1="14" y1="1" x2="14" y2="4"></line>
+            </svg>
+            <span>Taco Tuesday</span>
+          </a>
+          <p class="footer-tagline">
+            Where every day feels like a celebration. 
+            Premium coffee, unforgettable vibes.
+          </p>
+        </div>
+        
+        <!-- Quick Links -->
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#testimonials">Reviews</a></li>
+            <li><a href="#location">Visit</a></li>
+          </ul>
+        </div>
+        
+        <!-- Legal -->
+        <div class="footer-legal">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Cookie Policy</a></li>
+            <li><a href="#">Accessibility</a></li>
+          </ul>
+        </div>
+        
+        <!-- Newsletter -->
+        <div class="footer-newsletter">
+          <h4>Stay in the Loop</h4>
+          <p>Get exclusive offers and updates.</p>
+          <form class="newsletter-form">
+            <input 
+              type="email" 
+              placeholder="Enter your email" 
+              aria-label="Email address"
+              class="form-input"
+              required
+            >
+            <button type="submit" class="btn btn-primary">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="22" y1="2" x2="11" y2="13"></line>
+                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+              </svg>
+            </button>
+          </form>
+        </div>
+      </div>
+      
+      <!-- Bottom Bar -->
+      <div class="footer-bottom">
+        <p>&copy; 2025 Taco Tuesday Coffee. All rights reserved.</p>
+        <p>Crafted with ☕ and ❤️</p>
+      </div>
+    </div>
+  </footer>
+  
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
+  <script src="js/coffee-cup-3d.js"></script>
+  <script src="js/steam-effect.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/navbar.js"></script>
+  <script src="js/testimonials.js"></script>
+  <script src="js/parallax.js"></script>
+</body>
+</html>

@@ -1,0 +1,304 @@
+/* ========================================
+   TACO TUESDAY COFFEE - Design Tokens
+   ========================================
+   A premium dark-mode coffee shop landing page
+   with warm earth tones and glass-morphism
+   ======================================== */
+
+:root {
+  /* ========================================
+     COLOR PALETTE - Warm Earth Tones + Dark Mode
+     ======================================== */
+  
+  /* Dark Backgrounds */
+  --color-bg-dark: #1A1512;        /* Deep Espresso - Main background */
+  --color-bg-darker: #0F0C0A;      /* Darker shade for footer */
+  --color-bg-card: #251E1A;        /* Card background */
+  --color-bg-glass: rgba(26, 21, 18, 0.85); /* Glass navbar */
+  
+  /* Light Backgrounds */
+  --color-bg-light: #F5EFE6;       /* Cream Latte - Secondary sections */
+  --color-bg-cream: #EBE5DC;       /* Slightly darker cream */
+  
+  /* Primary Accent - Warm Caramel */
+  --color-primary: #D4A574;
+  --color-primary-light: #E8C59A;
+  --color-primary-dark: #B8925A;
+  
+  /* Secondary Accent - Terracotta */
+  --color-secondary: #C65D3B;
+  --color-secondary-light: #E07A52;
+  --color-secondary-dark: #A34628;
+  
+  /* Glow Accent - Golden Crema */
+  --color-glow: #E8B86D;
+  --color-glow-soft: rgba(232, 184, 109, 0.3);
+  --color-glow-medium: rgba(232, 184, 109, 0.5);
+  
+  /* Text Colors - Dark Mode */
+  --color-text-primary: #F5EFE6;   /* Cream for headings */
+  --color-text-secondary: #C9B8A4; /* Muted text */
+  --color-text-tertiary: #9A8B7C;  /* Subtle text */
+  
+  /* Text Colors - Light Mode */
+  --color-text-dark: #1A1512;      /* Espresso for headings */
+  --color-text-dark-secondary: #4A4036; /* Body text */
+  
+  /* Semantic Colors */
+  --color-success: #7CB342;
+  --color-error: #E57373;
+  --color-warning: #FFB74D;
+  
+  /* ========================================
+     TYPOGRAPHY - One Font Family (General Sans / Space Grotesk)
+     ======================================== */
+  
+  /* Font Stack */
+  --font-primary: 'General Sans', 'Space Grotesk', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+  
+  /* Font Sizes - REM units with fluid scaling */
+  --text-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
+  --text-sm: clamp(0.875rem, 0.8rem + 0.375vw, 1rem);
+  --text-base: clamp(1rem, 0.9rem + 0.5vw, 1.125rem);
+  --text-lg: clamp(1.125rem, 1rem + 0.625vw, 1.25rem);
+  --text-xl: clamp(1.25rem, 1.1rem + 0.75vw, 1.5rem);
+  --text-2xl: clamp(1.5rem, 1.25rem + 1.25vw, 2rem);
+  --text-3xl: clamp(1.75rem, 1.4rem + 1.75vw, 2.5rem);
+  --text-4xl: clamp(2rem, 1.5rem + 2.5vw, 3rem);
+  --text-5xl: clamp(2.5rem, 1.75rem + 3.75vw, 4rem);
+  --text-6xl: clamp(3rem, 2rem + 5vw, 5rem);
+  
+  /* Font Weights */
+  --font-light: 300;
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-semibold: 600;
+  --font-bold: 700;
+  
+  /* Line Heights */
+  --leading-none: 1;
+  --leading-tight: 1.25;
+  --leading-snug: 1.375;
+  --leading-normal: 1.5;
+  --leading-relaxed: 1.625;
+  --leading-loose: 2;
+  
+  /* Letter Spacing */
+  --tracking-tighter: -0.05em;
+  --tracking-tight: -0.025em;
+  --tracking-normal: 0;
+  --tracking-wide: 0.025em;
+  --tracking-wider: 0.05em;
+  --tracking-widest: 0.1em;
+  
+  /* ========================================
+     SPACING - 8px Baseline Grid
+     ======================================== */
+  
+  --space-0: 0;
+  --space-1: 0.25rem;   /* 4px */
+  --space-2: 0.5rem;    /* 8px */
+  --space-3: 0.75rem;   /* 12px */
+  --space-4: 1rem;      /* 16px */
+  --space-5: 1.25rem;   /* 20px */
+  --space-6: 1.5rem;    /* 24px */
+  --space-8: 2rem;      /* 32px */
+  --space-10: 2.5rem;   /* 40px */
+  --space-12: 3rem;     /* 48px */
+  --space-16: 4rem;     /* 64px */
+  --space-20: 5rem;     /* 80px */
+  --space-24: 6rem;     /* 96px */
+  --space-32: 8rem;     /* 128px */
+  
+  /* ========================================
+     LAYOUT
+     ======================================== */
+  
+  /* Container Max Widths */
+  --container-sm: 640px;
+  --container-md: 768px;
+  --container-lg: 1024px;
+  --container-xl: 1280px;
+  --container-2xl: 1440px;
+  
+  /* Section Padding */
+  --section-padding-y: clamp(4rem, 3rem + 5vw, 8rem);
+  --section-padding-x: clamp(1.5rem, 1rem + 2.5vw, 4rem);
+  
+  /* Border Radius */
+  --radius-sm: 0.375rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+  --radius-2xl: 1.5rem;
+  --radius-3xl: 2rem;
+  --radius-full: 9999px;
+  
+  /* ========================================
+     SHADOWS - Soft, Layered Depth (No Harsh Borders)
+     ======================================== */
+  
+  /* Dark Mode Shadows */
+  --shadow-sm: 
+    0 1px 2px rgba(0, 0, 0, 0.3),
+    0 1px 1px rgba(0, 0, 0, 0.2);
+  
+  --shadow-md: 
+    0 4px 6px rgba(0, 0, 0, 0.3),
+    0 5px 15px rgba(0, 0, 0, 0.25);
+  
+  --shadow-lg: 
+    0 10px 15px rgba(0, 0, 0, 0.35),
+    0 10px 30px rgba(0, 0, 0, 0.3);
+  
+  --shadow-xl: 
+    0 20px 25px rgba(0, 0, 0, 0.4),
+    0 25px 50px rgba(0, 0, 0, 0.35);
+  
+  /* Glow Shadows */
+  --shadow-glow-sm: 
+    0 0 10px var(--color-glow-soft),
+    0 0 20px var(--color-glow-soft);
+  
+  --shadow-glow-md: 
+    0 0 15px var(--color-glow-medium),
+    0 0 30px var(--color-glow-soft),
+    0 0 45px var(--color-glow-soft);
+  
+  --shadow-glow-lg: 
+    0 0 20px var(--color-glow-medium),
+    0 0 40px var(--color-glow-soft),
+    0 0 60px var(--color-glow-soft),
+    0 0 80px var(--color-glow-soft);
+  
+  /* Colored Glow Shadows */
+  --shadow-primary: 
+    0 4px 14px rgba(212, 165, 116, 0.4),
+    0 0 30px rgba(212, 165, 116, 0.2);
+  
+  --shadow-secondary: 
+    0 4px 14px rgba(198, 93, 59, 0.4),
+    0 0 30px rgba(198, 93, 59, 0.2);
+  
+  /* ========================================
+     GLASS-MORPHISM EFFECTS
+     ======================================== */
+  
+  --glass-bg: rgba(26, 21, 18, 0.7);
+  --glass-bg-light: rgba(245, 239, 230, 0.7);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --glass-border-light: rgba(26, 21, 18, 0.08);
+  --glass-blur: 12px;
+  --glass-saturate: 140%;
+  
+  /* ========================================
+     ANIMATIONS & TRANSITIONS
+     ======================================== */
+  
+  /* Timing Functions */
+  --ease-out: cubic-bezier(0.215, 0.61, 0.355, 1);
+  --ease-in-out: cubic-bezier(0.645, 0.045, 0.355, 1);
+  --ease-spring: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  --ease-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  
+  /* Transition Durations */
+  --duration-fast: 150ms;
+  --duration-normal: 200ms;
+  --duration-slow: 300ms;
+  --duration-slower: 500ms;
+  --duration-slowest: 700ms;
+  
+  /* Standard Transitions */
+  --transition-colors: color var(--duration-normal) var(--ease-out),
+                       background-color var(--duration-normal) var(--ease-out),
+                       border-color var(--duration-normal) var(--ease-out);
+  
+  --transition-transform: transform var(--duration-normal) var(--ease-out);
+  
+  --transition-shadow: box-shadow var(--duration-normal) var(--ease-out);
+  
+  --transition-all: all var(--duration-normal) var(--ease-out);
+  
+  /* ========================================
+     Z-INDEX SCALE
+     ======================================== */
+  
+  --z-base: 0;
+  --z-dropdown: 10;
+  --z-sticky: 20;
+  --z-fixed: 30;
+  --z-modal-backdrop: 40;
+  --z-modal: 50;
+  --z-popover: 60;
+  --z-tooltip: 70;
+  --z-toast: 80;
+  
+  /* ========================================
+     MESH GRADIENT COLORS
+     ======================================== */
+  
+  --gradient-mesh-1: #1A1512;  /* Deep Espresso */
+  --gradient-mesh-2: #2D1F1A;  /* Warm Brown */
+  --gradient-mesh-3: #4A2F2A;  /* Rich Mocha */
+  --gradient-mesh-4: #C65D3B;  /* Terracotta */
+  --gradient-mesh-5: #D4A574;  /* Caramel */
+  --gradient-mesh-6: #E8B86D;  /* Golden Crema */
+  
+  /* ========================================
+     BREAKPOINTS (for reference in media queries)
+     ======================================== */
+  
+  /* Mobile First Approach */
+  --bp-sm: 640px;    /* Small mobile */
+  --bp-md: 768px;    /* Tablet */
+  --bp-lg: 1024px;   /* Desktop */
+  --bp-xl: 1280px;   /* Large desktop */
+  --bp-2xl: 1440px;  /* Extra large desktop */
+  
+  /* ========================================
+     ACCESSIBILITY
+     ======================================== */
+  
+  /* Focus Ring */
+  --focus-ring: 0 0 0 2px var(--color-bg-dark),
+                0 0 0 4px var(--color-primary);
+  
+  --focus-ring-light: 0 0 0 2px var(--color-bg-light),
+                      0 0 0 4px var(--color-secondary);
+  
+  /* Reduced Motion */
+  --motion-safe: smooth;
+  --motion-reduce: none;
+}
+
+/* ========================================
+   LIGHT MODE OVERRIDES (if needed)
+   ======================================== */
+
+[data-theme="light"] {
+  --color-bg-primary: var(--color-bg-light);
+  --color-bg-secondary: var(--color-bg-cream);
+  --color-text-primary: var(--color-text-dark);
+  --color-text-secondary: var(--color-text-dark-secondary);
+  --glass-bg: rgba(245, 239, 230, 0.7);
+  --glass-border: var(--glass-border-light);
+}
+
+/* ========================================
+   REDUCED MOTION PREFERENCE
+   ======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --motion-safe: none;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
